@@ -1,0 +1,94 @@
+.custom-container {
+    max-width: 1320px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    .nav-barr {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        padding: 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        .main-nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .navbttn1 {
+            display: flex;
+            position: relative;
+            gap: 5px;
+            align-items: center;
+            padding: 20px;
+            background: transparent;
+            border: 1px solid #00faff;
+            box-shadow:
+                0 0 4px #00cfe6,
+                0 0 8px #00cfe6;
+            border-radius: 15px;
+            overflow: hidden;
+            z-index: 0;
+            transition: color 0.3s ease-in-out;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 0%;
+                width: 100%;
+                background-color: #00cfe6;
+                z-index: -1;
+                transition: height 0.4s ease-in-out;
+            }
+            &:hover::before{
+                height: 100%;
+            }
+        }
+    }
+
+        .innerdivv{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+}
+
+.modal-body{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    p{
+        color: black;
+    }
+    padding: 30px 20px;
+}
+
+.modal-footer{
+    p{
+        color: black;
+        span{
+            display: block;
+            margin-top: 5px;
+        }
+    }
+    justify-content: flex-start;
+    padding: 30px 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    .desktop {
+        display: none !important;
+    }
+
+    .phonenav {
+        display: block !important;
+        
+    }
+}

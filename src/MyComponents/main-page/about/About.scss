@@ -1,0 +1,43 @@
+.about {
+    padding-top: 100px;
+    align-items: center;
+
+    .aboutcontainer {
+        margin-top: 50px !important;
+        padding: 0 80px 400px 80px;
+        border: 1px solid #00faff;
+        box-shadow:
+            0 0 4px #00cfe6,
+            0 0 8px #00cfe6;
+        border-radius: 15px;
+        display: flex;
+        max-width: 600px;
+        justify-content: space-between;
+        margin: 0 auto;
+        overflow: hidden;
+
+        .bi-linkedin {
+            position: relative;
+            animation: mymove 5s linear infinite;
+        }
+        .bi-github {
+            position: relative;
+            animation: mymove 6s linear infinite;
+        }
+
+        .bi-instagram {
+            position: relative;
+            animation: mymove 4s linear infinite;
+        }
+
+        @keyframes mymove {
+            0% {
+                top: -50px;
+            }
+            100% {
+                top: 450px;
+            }
+        }
+        
+    }
+}
