@@ -1,14 +1,33 @@
 import React from 'react'
 import './About.scss'
+import { useEffect, useRef, useState } from "react";
 
 const About = () => {
+          const ref = useRef();
+      const [isVisible, setIsVisible] = useState(false);
+    
+      useEffect(() => {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              setIsVisible(true);
+    
+            }
+          },
+          { threshold: 0.1 }
+        );
+    
+        if (ref.current) observer.observe(ref.current);
+    
+        return () => observer.disconnect();
+      }, []);
     return (
 
-        <section>
+        <section id='about'>
 
         <div className="custom-container">
 
-            <div className="about">
+            <div ref={ref} className={`scroll-fade-in about ${isVisible ? "visible" : ""}`}>
 
                 <h1 className="mainheading">ABOUT</h1>
                 <p className="pixel">Check me out on these!</p>

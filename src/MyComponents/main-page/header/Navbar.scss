@@ -2,7 +2,7 @@
     max-width: 1320px;
     padding: 0 20px;
     margin: 0 auto;
-
+}
 
     .nav-barr {
         display: flex;
@@ -10,6 +10,10 @@
         width: 100%;
         align-items: center;
         padding: 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
         .main-nav {
             display: flex;
             gap: 30px;
@@ -54,7 +58,7 @@
         align-items: center;
     }
 
-}
+
 
 .modal-body{
     display: flex;
