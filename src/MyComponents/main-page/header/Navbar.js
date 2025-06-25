@@ -31,6 +31,7 @@ const Navbar = () => {
               <a className="def headingfont f-25 text-hover-fill" href="#">
                 ABOUT
               </a>
+
             </div>
               <button className="navbttn1 def f-20 headingfont" onClick={handleShow1}>
                 CONTACT ME{" "}
