@@ -11,12 +11,11 @@
 
 
 body{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  height: auto;
+  overflow-y: auto;
     background: url('./Assets/stars.jpg');
-    width: 100%;
 }
+
 
 div,
 ul,
