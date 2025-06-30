@@ -1,32 +1,27 @@
-
-#projects{
-    
-    
-
+#projects {
+  // You can leave this empty or add anchor-based padding/margin here if needed
 }
 
-.projects{
-    display: flex;
-    flex-direction: column;
-    padding: 50px 0;
-    gap: 20px;
+.projects {
+  display: flex;
+  flex-direction: column;
+  padding: 12.5rem 0; // 200px top and bottom
+  gap: 1.25rem; // 20px
 
-    .sliderimg{
-        border-radius: 10px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        
+  .sliderimg {
+    border-radius: 0.625rem; // 10px
+    padding: 1.25rem 0; // 20px top & bottom
 
-    img{
-        border-radius: 10px;
-        width: 90%;
-        overflow: hidden;
-        align-items: center;
-        margin: 0 auto;
-        transition: 0.5s all;
-    &:hover{
+    img {
+      border-radius: 0.625rem; // 10px
+      width: 90%;
+      display: block; // ensures center alignment
+      margin: 0 auto;
+      transition: transform 0.5s ease;
+
+      &:hover {
         transform: scale(1.08);
+      }
     }
-    }
-}
+  }
 }

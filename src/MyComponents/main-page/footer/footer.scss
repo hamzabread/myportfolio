@@ -1,0 +1,27 @@
+.footer {
+  padding: 6.25rem; // 100px
+  margin-top: 9.375rem; // 150px
+  align-items: center;
+  border-top: 0.125rem solid #FFF; // 2px
+
+  h1 {
+    color: white;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px){
+    .footer{
+        h1{
+            font-size: 25px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .footer{
+        h1{
+            font-size: 16px;
+        }
+    }
+}

@@ -1,21 +1,23 @@
 @import url('https://fonts.cdnfonts.com/css/04b19');
 
-*{
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    padding: 0;
-    margin: 0;
-}
-
 @import url('https://fonts.cdnfonts.com/css/04b19');
 
-
-body{
-  height: auto;
-  overflow-y: auto;
-    background: url('./Assets/stars.jpg');
+html {
+  font-size: 16px; // 1rem = 16px
 }
 
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: auto;
+  overflow-y: auto;
+  background: url('./Assets/stars.jpg');
+}
 
 div,
 ul,
@@ -35,98 +37,118 @@ button {
   transition: background-color 1s ease-out;
 }
 
-
-a{
-    text-decoration: none !important;
+a {
+  text-decoration: none !important;
 }
 
-p{
-    margin-bottom: 0;
+p {
+  margin-bottom: 0;
 }
 
-button{
-    cursor: pointer;
-    border: none;
+button {
+  cursor: pointer;
+  border: none;
 }
 
-.f-16{
-    font-size: 16px !important;
+/* Utility font sizes (converted to rem) */
+.f-14 {
+  font-size: 0.875rem !important; // 14px
 }
 
-.f-20{
-    font-size: 20px !important;
+.f-16 {
+  font-size: 1rem !important; // 16px
 }
 
-.f-25{
-    font-size: 25px !important;
+.f-20 {
+  font-size: 1.25rem !important; // 20px
 }
 
-.f-14{
-    font-size: 14px !important;
+.f-25 {
+  font-size: 1.5625rem !important; // 25px
 }
 
-.pixel{
-        font-family: "Press Start 2P", system-ui !important;
-        font-size: 12px;
-        line-height: 150%;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 120%;
-        margin: 0;
-        color: #FFF;
-        text-align: center;
+/* Pixel font styles */
+.pixel {
+  font-family: "Press Start 2P", system-ui !important;
+  font-size: 1rem; // 12px
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+  color: #FFF;
+  text-align: center;
 }
 
-.def{
-    color: #FFF;
-    font-family: "Press Start 2P", system-ui;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%; /* 14.4px */
-    margin: 0;
+.def {
+  color: #FFF;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 0.625rem; // 10px
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
 }
 
-.headingfont{
-    font-family: '04b_19', sans-serif !important;
-    letter-spacing: 1px;
+/* Heading font */
+.headingfont {
+  font-family: '04b_19', sans-serif !important;
+  letter-spacing: 0.0625rem; // 1px
 }
 
-.d-none{
-    display: none;
+/* Visibility helpers */
+.d-none {
+  display: none;
 }
 
+/* Button / link hover effect */
 .text-hover-fill {
   position: relative;
   padding: 0.2em 0.4em;
   overflow: hidden;
   z-index: 0;
-  &::before{
+
+  &::before {
     content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0%;
-  background-color: #00cfe6; /* neon light blue */
-  z-index: -1;
-  transition: height 0.4s ease-in-out;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #00cfe6; // neon light blue
+    z-index: -1;
+    transition: height 0.4s ease-in-out;
   }
-  &:hover::before{
+
+  &:hover::before {
     height: 100%;
   }
 }
 
-.mainheading{
-    font-size: 50px;
-    color: #00cfe6;
-    text-wrap: nowrap;
-    text-align: center;
-    font-family: "04b_19", sans-serif !important;
-    letter-spacing: 1px;
-    font-weight: 500;
+/* Main heading with responsive font sizing */
+.mainheading {
+  font-size: clamp(2rem, 5vw, 3.5rem); // 32px to 56px depending on screen
+  color: #00cfe6;
+  text-wrap: nowrap;
+  text-align: center;
+  font-family: "04b_19", sans-serif !important;
+  letter-spacing: 0.0625rem; // 1px
+  font-weight: 500;
 }
 
-.color-b{
-    color: black;
+/* Optional text color */
+.color-b {
+  color: black;
+}
+
+/* Scroll animation styles */
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(5rem); // 80px
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  will-change: opacity, transform;
+}
+
+.scroll-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

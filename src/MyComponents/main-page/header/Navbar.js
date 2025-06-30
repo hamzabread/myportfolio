@@ -25,10 +25,10 @@ const Navbar = () => {
               <a className="def headingfont f-25 text-hover-fill" href="#">
                 HOME
               </a>
-              <a className="def headingfont f-25 text-hover-fill" href="#">
+              <a className="def headingfont f-25 text-hover-fill" href="#projects">
                 PROJECTS
               </a>
-              <a className="def headingfont f-25 text-hover-fill" href="#">
+              <a className="def headingfont f-25 text-hover-fill" href="#about">
                 ABOUT
               </a>
 
