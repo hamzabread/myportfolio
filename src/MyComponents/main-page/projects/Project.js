@@ -13,7 +13,18 @@ const Project = () => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            }
+        ]
     };
       const ref = useRef();
   const [isVisible, setIsVisible] = useState(false);

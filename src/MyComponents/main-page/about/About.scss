@@ -1,43 +1,46 @@
 .about {
-    padding: 100px 0;
-    align-items: center;
+  padding: 6.25rem 0; // 100px
+  align-items: center;
 
-    .aboutcontainer {
-        margin-top: 50px !important;
-        padding: 0 80px 400px 80px;
-        border: 1px solid #00faff;
-        box-shadow:
-            0 0 4px #00cfe6,
-            0 0 8px #00cfe6;
-        border-radius: 15px;
-        display: flex;
-        max-width: 600px;
-        justify-content: space-between;
-        margin: 0 auto;
-        overflow: hidden;
+  .aboutcontainer {
+    margin-top: 3.125rem !important; // 50px
+    padding: 0 5rem 25rem 5rem; // 0 80px 400px 80px
+    border: 1px solid #00faff;
+    box-shadow:
+      0 0 0.25rem #00cfe6, // 4px
+      0 0 0.5rem #00cfe6;  // 8px
+    border-radius: 0.9375rem; // 15px
+    display: flex;
+    max-width: 37.5rem; // 600px
+    justify-content: space-between;
+    margin: 0 auto;
+    overflow: hidden;
 
-        .bi-linkedin {
-            position: relative;
-            animation: mymove 5s linear infinite;
-        }
-        .bi-github {
-            position: relative;
-            animation: mymove 6s linear infinite;
-        }
-
-        .bi-instagram {
-            position: relative;
-            animation: mymove 4s linear infinite;
-        }
-
-        @keyframes mymove {
-            0% {
-                top: -50px;
-            }
-            100% {
-                top: 450px;
-            }
-        }
-        
+    .bi-linkedin,
+    .bi-github,
+    .bi-instagram {
+      position: relative;
     }
+
+    .bi-linkedin {
+      animation: floatIcon 5s linear infinite;
+    }
+
+    .bi-github {
+      animation: floatIcon 6s linear infinite;
+    }
+
+    .bi-instagram {
+      animation: floatIcon 4s linear infinite;
+    }
+
+    @keyframes floatIcon {
+      0% {
+        top: -3.125rem; // -50px
+      }
+      100% {
+        top: 28.125rem; // 450px
+      }
+    }
+  }
 }
